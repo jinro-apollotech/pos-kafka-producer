@@ -22,10 +22,11 @@ public class KafkaController {
     private KafkaService kafkaService;
  
     @RequestMapping(value = "/publish", method = RequestMethod.POST)
-    public ResponseEntity<Object> publishKafka(@RequestBody Map<String, String> params)
+    public ResponseEntity<Object> publishKafka(@RequestBody Map<String,Object> params)
 	throws Exception {
-        log.info("Publish Kafka: " +params);
-        return kafkaService.publishRequestToKafka(params);
+        // log.info("Publish Kafka: " +params.toString());
+        JSONObject paramJsonObject = new JSONObject(params);
+        return kafkaService.publishRequestToKafka(paramJsonObject);
     }
 
 }
