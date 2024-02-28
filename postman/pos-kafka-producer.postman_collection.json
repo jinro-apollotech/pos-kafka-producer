@@ -1,0 +1,29 @@
+{
+	"info": {
+		"_postman_id": "9d81a756-7e33-4968-942b-11b1d5bc26ed",
+		"name": "pos-kafka-producer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "13177866",
+		"_collection_link": "https://restless-space-874748.postman.co/workspace/My-Workspace~a804637c-730b-487f-81a8-224cabb4482b/collection/13177866-9d81a756-7e33-4968-942b-11b1d5bc26ed?action=share&source=collection_link&creator=13177866"
+	},
+	"item": [
+		{
+			"name": "publish",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"db_id\" : \"55802\",\n    \"class\" : \"ph.com.apollo.pos.models.transaction.transactionType.Sales\",\n    \"is_official_receipt\" : true,\n    \"is_training_mode\" : false,\n    \"transaction_id\" : \"0009-100000289-1-LRKENXCH\",\n    \"terminal_id\" : \"1\",\n    \"receipt_number\" : \"100000289\",\n    \"receipt_reset\" : \"0\",\n    \"credit_memo\" : \"0\",\n    \"credit_memo_reset\" : \"0\",\n    \"reference_id\" : null,\n    \"created_date\" : \"2024-01-19 16:55:23\",\n    \"business_date\" : \"2023-05-31\",\n    \"business_date_id\" : \"35651\",\n    \"shift_id\" : \"53401\",\n    \"shift_number\" : \"3\",\n    \"cashier_party_id\" : \"0000000\",\n    \"customer_party_id\" : \"PROFILE_1\",\n    \"manager_party_id\" : null,\n    \"loyalty_card_number\" : null,\n    \"loyalty_sold_to\" : \"\",\n    \"items\" : [\n    \t{\n            \"db_id\" : \"55853\",\n            \"line_number\" : \"0\",\n            \"class\" : \"ph.com.apollo.pos.models.transaction.lineItem.NonVatable\",\n            \"product_id\" : \"40100001\",\n            \"parent_category_id\" : \"REGULAR_ITEM\",\n            \"sku\" : null,\n            \"serial_number\" : null,\n            \"is_scanned\" : true,\n            \"is_refunded\" : false,\n            \"original_quantity\" : \"4\",\n            \"quantity\" : \"4\",\n            \"price_currency\" : \"PHP\",\n            \"price_gross_amount\" : \"180.00\",\n            \"price_net_amount\" : \"51.44\",\n            \"price_unit_amount\" : \"45.00\",\n            \"sc_discount_amount\" : \"51.44\",\n            \"scext_discount_amount\" : \"19.28\",\n            \"pwd_discount_amount\" : \"0.00\",\n            \"pwdext_discount_amount\" : \"0.00\",\n            \"sp_discount_amount\" : \"0.00\",\n            \"spext_discount_amount\" : \"0.00\",\n            \"service_fee_amount\" : \"0.00\",\n            \"commission_amount\" : \"0.00\",\n            \"diplomat_discount_amount\" : \"0.00\",\n            \"promo_discount_amount\" : \"0.00\",\n            \"vatable_amount\" : \"0.00\",\n            \"non_vatable_amount\" : \"180.00\",\n            \"comments\" : null,\n            \"adjustments\" : [\n            {\n                \"db_id\" : \"55905\",\n                \"class\" : \"ph.com.apollo.pos.models.transaction.adjustment.PromotionAdjustment\",\n                \"comments\" : null,\n                \"original_quantity\" : \"4\",\n                \"quantity\" : \"4\",\n                \"amount\" : \"4.82\",\n                \"percentage\" : \"10.71\",\n                \"promo_id\" : \"00000001\",\n                \"promo_rule_id\" : \"213060061023027786\",\n                \"promo_action_id\" : \"213060391256474188\",\n                \"non_cash_master_code\" : null,\n                \"non_cash_code\" : null\n            },\n            {\n                \"db_id\" : \"55906\",\n                \"class\" : \"ph.com.apollo.pos.models.transaction.adjustment.PromotionAdjustment\",\n                \"comments\" : null,\n                \"original_quantity\" : \"4\",\n                \"quantity\" : \"4\",\n                \"amount\" : \"8.04\",\n                \"percentage\" : \"17.86\",\n                \"promo_id\" : \"00000002\",\n                \"promo_rule_id\" : \"213060580293018191\",\n                \"promo_action_id\" : \"213060921633997393\",\n                \"non_cash_master_code\" : \"11230\",\n                \"non_cash_code\" : \"540\"\n            }\n            ]\n        }\n    ],\n    \"adjustments\" : null,\n    \"rewards\" : null,\n    \"payments\" : [\n        {\n            \"db_id\" : \"55952\",\n            \"currency\" : \"PHP\",\n            \"amount\" : \"128.56\",\n            \"class\" : \"ph.com.apollo.pos.models.transaction.payment.Cash\",\n            \"reference_id\" : null,\n            \"issuer\" : null,\n            \"transaction_date\" : null,\n            \"account_number\" : null,\n            \"terminal_id\" : null,\n            \"approval_code\" : null,\n            \"info\" : null,\n            \"name\" : null,\n            \"retrieval_ref_no\" : null\n        }\n    ],\n    \"amount_currency\" : \"PHP\",\n    \"amount_total\" : \"180.00\",\n    \"amount_paid\" : \"128.56\",\n    \"amount_tax\" : \"0.00\",\n    \"amount_computed\" : \"128.56\",\n    \"amount_change\" : \"0.00\",\n    \"total_quantity\" : \"4\",\n    \"promo_amount\" : \"180.00\",\n    \"promo_discount_amount\" : \"0.00\",\n    \"tax_rate\" : \"0.12\",\n    \"vatable_amount\" : \"0.00\",\n    \"non_vatable_amount\" : \"180.00\",\n    \"reason_id\" : null,\n    \"reason\" : null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://dev-pos-kafka-producer-dadiud4mzq-as.a.run.app/kafka/publish"
+			},
+			"response": []
+		}
+	]
+}
